@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                git 'https://github.com/MayDaycwxiong/simple-java-maven-app'
                 sh 'mvn -B -DskipTests clean package'
             }
         }
